@@ -7,6 +7,11 @@ Python program for user to set the date and time
 * Raspberry Pi 4
 * BrainCraft Hat
 
+# Libraries
+* tkinter
+* serial
+* datetime
+
 # Scheduling
 * Using Cron I will schedule for the python program to be run at the beginning of everyday
 * I will set it up so that if the current date matches the saved date the program will go into a loop that iterates once ever hour
