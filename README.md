@@ -10,7 +10,8 @@ Python program for user to set the date and time
 
 # Libraries
 * tkinter
-* serial
+* Python serial<br /> 
+installation instructions: https://pypi.org/project/pyserial/
 * datetime
 
 # Scheduling
