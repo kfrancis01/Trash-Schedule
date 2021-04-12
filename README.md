@@ -6,6 +6,7 @@ Python program for user to set the date and time
 * Cron
 * Raspberry Pi 4
 * BrainCraft Hat
+* Arduino
 
 # Libraries
 * tkinter
@@ -24,3 +25,6 @@ Python program for user to set the date and time
 
 # RPi BrainCraft Hat
 * Can identify around 200 objects but can be trained
+
+# Arduino Test
+Includes a program to test that the arduino is reading and writing to the Raspberry Pi
