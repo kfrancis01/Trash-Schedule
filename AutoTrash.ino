@@ -1,21 +1,18 @@
 #include <SharpIR.h>
 #include <AccelStepper.h>
-//#include <AFMotor.h>
-// Include the Arduino Stepper.h library:
-#include <Stepper.h>
 
-const int stepsPerRevolution = 200;  // change this to fit the number of steps per revolution
-// Create stepper object called 'myStepper', note the pin order:
-Stepper myStepper = Stepper(stepsPerRevolution, A0, A1, A2, A3);
-//SharpIR dSens = SharpIR(IRPin, model);
+//SharpIR dSens = SharpIR(A4, model);
+int dSens = analogRead(4);
+AccelStepper stepper(4,A0,A1,A2,A3);
 
 void setup() {
   
-  // Set the speed to 10 rpm:
-  myStepper.setSpeed(10);
-  
   // Begin Serial communication at a baud rate of 9600:
   Serial.begin(9600);
+  //stepper.setMaxSpeed(1000);
+  stepper.setSpeed(350);
+  stepper.setMaxSpeed(350); 
+  stepper.setAcceleration(20);        
 }
 
 void loop() {
@@ -27,16 +24,21 @@ void loop() {
   //Serial.print("Mean distance: ");
   //Serial.print(distance_cm);
   //Serial.println(" cm");
+  Serial.println(dSens);
   //if(distance_cm < 5){
-  Serial.println("clockwise");
-  myStepper.step(stepsPerRevolution);
-  delay(1000);
+  stepper.moveTo(10000);
+  stepper.runToPosition();
+  
+  if (stepper.distanceToGo() == 0){
+  stepper.setAcceleration(20); 
+  stepper.moveTo(-10000);
+  stepper.runToPosition();
+  }
+  //}
+  //delay(500);
   //}
   //else
-  // Step one revolution in the other direction:
-  //Serial.println("counterclockwise");
-  //myStepper.step(-stepsPerRevolution);
-  //delay(500);
-
+  //stepper.moveTo(10000);
+  //stepper.runToPosition();
 
 }
