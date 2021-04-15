@@ -1,12 +1,19 @@
 # Trash-Schedule
-Python program for user to set the date and time
+Python program for user to set the date and time that sends and recieves information from the Arduino.
 
-# Technology
+# RPi Technology
 * Python 3.8
 * Cron
 * Raspberry Pi 4
 * BrainCraft Hat
 * Arduino
+
+# Arduino Technology
+* Time of Flight Sensor
+* PIR Sensor
+
+# Testing Technology
+* USB to TTL (FT232)
 
 # Libraries
 * tkinter
