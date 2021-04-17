@@ -9,7 +9,8 @@ Python program for user to set the date and time that sends and recieves informa
 * Arduino
 
 # Arduino Technology
-* Time of Flight Sensor
+* Time of Flight Sensor [determined using the following link] </br>
+https://www.terabee.com/choosing-right-distance-sensor-your-application/
 * PIR Sensor
 
 # Testing Technology
