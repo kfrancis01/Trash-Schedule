@@ -1,6 +1,11 @@
 # Trash-Schedule
 Python program for user to set the date and time that sends and recieves information from the Arduino.
 
+# Motivation
+I created a proposal for my Mechatronics elective final project in order to design and create an autonomous trashcan that would move to the curb of the street than move back to home base. In this update I created a GUI that will allow the user to define what date and time that they want the trashcan to move. It also a proof of concept for the chassis using AccelStepper library and ultrasound sensors for object avoidance.
+
+# Screenshots
+
 # RPi Technology
 * Python 3.8
 * Cron
@@ -18,9 +23,12 @@ https://www.terabee.com/choosing-right-distance-sensor-your-application/
 
 # Libraries
 * tkinter
+* turtle
+#### I use tkinter with an embedded turtle canvas:
 * Python serial<br /> 
 installation instructions: https://pypi.org/project/pyserial/
 * datetime
+* AccelStepper
 
 # Scheduling
 * Using Cron I will schedule for the python program to be run at the beginning of everyday
